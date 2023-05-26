@@ -144,7 +144,10 @@ app.delete('/todos', authenticateJWT, async (req, res) => {
   }
 });
 
-// Menjalankan server
-app.listen(3030, () => {
-  console.log('Server is running on port 3030');
+// Use PORT provided in environment or default to 3030
+const port = process.env.PORT || 3030;
+
+// Listen on `port` and 0.0.0.0
+app.listen(port, "0.0.0.0", function () {
+  // ...
 });
