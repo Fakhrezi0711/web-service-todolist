@@ -1,5 +1,4 @@
 const express = require('express');
-const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { User, Todo } = require('./models');
 
@@ -30,8 +29,7 @@ const authenticateJWT = (req, res, next) => {
 app.post('/register', async (req, res) => {
   try {
     const { name, email, password } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const user = await User.create({ name, email, password: hashedPassword });
+    const user = await User.create({ name, email, password});
     res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
     console.error(error);
