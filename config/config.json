@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "fakhrezi123",
+    "password": "istabudi",
+    "database": "todolist_service",
+    "host": "db4free.net",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "fakhrezi123",
+    "password": "istabudi",
+    "database": "todolist_service",
+    "host": "db4free.net",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "fakhrezi123",
+    "password": "istabudi",
+    "database": "todolist_service",
+    "host": "db4free.net",
+    "dialect": "mysql"
+  }
+}
