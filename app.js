@@ -41,14 +41,9 @@ app.post('/register', async (req, res) => {
 app.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ where: { email } });
+    const user = await User.findOne({ where: { email,password } });
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
-    }
-
-    const passwordMatch = await compare(password, user.password);
-    if (!passwordMatch) {
-      return res.status(401).json({ message: 'Invalid password' });
     }
 
     const token = jwt.sign({ id: user.id, email: user.email }, SECRET_KEY);
