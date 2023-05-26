@@ -9,4 +9,4 @@ Beberapa Jenis API yang bisa digunakan di Web Service ini antara lain;
 - app.get('/todos/:id')-> Untuk melihat detail To Do sesuai dengan id To Do yang ditulis dan required Json Web Token
 - app.put('/todos/:id') -> Untuk meng-edit To Do sesuai dengan id To Do yang ditulis dan required Json Web Token (title, description)
 - app.delete('/todos/:id)-> Untuk menghapus To Do sesuai dengan id To Do yang ditulis dan required Json Web Token
-- app.delete('/todos')-> Untuk menghapus semua To Do app.delete('/todos'
+- app.delete('/todos')-> Untuk menghapus semua To Do app.delete dan required Json Web Token
